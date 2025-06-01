@@ -133,14 +133,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="fragment.glsl" />
+    <None Include="Graphics.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Setup.md">
       <SubType>
       </SubType>
     </None>
+    <None Include="vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cube.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cube.h" />
+    <ClInclude Include="rectangle.h" />
+    <ClInclude Include="shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
