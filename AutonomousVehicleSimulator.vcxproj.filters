@@ -30,6 +30,12 @@
     <None Include="fragment.glsl">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Shaders.md">
+      <Filter>Notes</Filter>
+    </None>
+    <None Include="Cube.md">
+      <Filter>Notes</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">

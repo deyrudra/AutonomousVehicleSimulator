@@ -133,12 +133,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="Cube.md">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="fragment.glsl" />
     <None Include="Graphics.md">
       <SubType>
       </SubType>
     </None>
     <None Include="Setup.md">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Shaders.md">
       <SubType>
       </SubType>
     </None>

@@ -32,13 +32,10 @@ int main() {
         return -1;
     }
 
-    //glViewport(0, 0, xRes, yRes);
-
     glEnable(GL_DEPTH_TEST); // required for 3D
 
     Shader shader("vertex.glsl", "fragment.glsl");
 
-    Rectangle rectangle;
     unsigned int cubeVAO = createCubeVAO();
 
     while (!glfwWindowShouldClose(window)) {
@@ -46,7 +43,12 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shader.use();
-        //rectangle.draw();
+
+        // Set lighting uniforms
+        shader.setVec3("objectColor", 1.0f, 0.5f, 0.31f); // Orange color
+        shader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);   // White light
+        shader.setVec3("lightPos", 5.0f, 5.0f, 5.0f);     // Light position
+        shader.setVec3("viewPos", 0.0f, 0.0f, 3.0f);      // Camera position
 
         glm::mat4 model = glm::rotate(glm::mat4(1.0f), (float)glfwGetTime(), glm::vec3(0.5f, 1.0f, 0.0f));
         glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -3));
@@ -54,6 +56,7 @@ int main() {
         glm::mat4 mvp = proj * view * model;
 
         shader.setMat4("mvp", glm::value_ptr(mvp));
+        shader.setMat4("model", glm::value_ptr(model));
 
         glBindVertexArray(cubeVAO);
         glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);

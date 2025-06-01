@@ -30,8 +30,8 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
 
 void Shader::use() { glUseProgram(ID); }
 
-void Shader::setMat4(const std::string& name, const float* value) {
-    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, value);
-}
+//void Shader::setMat4(const std::string& name, const float* value) {
+//    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, value);
+//}
 
 Shader::~Shader() { glDeleteProgram(ID); }
