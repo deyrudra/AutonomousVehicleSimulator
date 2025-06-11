@@ -7,9 +7,10 @@ out vec3 Normal;
 
 uniform mat4 mvp;
 uniform mat4 model;
+uniform mat4 camMatrix;
 
 void main() {
     FragPos = vec3(model * vec4(aPos, 1.0));
     Normal = mat3(transpose(inverse(model))) * aNormal;
-    gl_Position = mvp * vec4(aPos, 1.0);
+    gl_Position = camMatrix * vec4(aPos, 1.0);
 }
