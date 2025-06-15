@@ -16,6 +16,9 @@
     <Filter Include="Notes">
       <UniqueIdentifier>{c551d4c2-c154-4b02-b9fb-63aca4d2d9c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{ffb819db-084a-4249-8276-e08adabe5ba9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Setup.md">
@@ -35,6 +38,12 @@
     </None>
     <None Include="Cube.md">
       <Filter>Notes</Filter>
+    </None>
+    <None Include="Loading Models.md">
+      <Filter>Notes</Filter>
+    </None>
+    <None Include="Head.stl">
+      <Filter>Models</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +65,15 @@
     <ClCompile Include="camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -68,6 +86,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
